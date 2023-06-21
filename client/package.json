@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "concurrently \"set BUILD_PATH=../server/public&& npm install && react-scripts build\"",
-    "test": "react-scripts test",
+    "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
