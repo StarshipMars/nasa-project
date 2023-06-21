@@ -1,10 +1,12 @@
 const request = require('supertest')
 const app = require('../../app')
 const {mongoConnect , mongoDisconnect} = require('../../../share-services/mongo');
+const planetsController = require('../planets/planets.controller');
 
 describe('Launches API' , ()=>{
     beforeAll(async ()=>{
       await mongoConnect();
+      await planetsController.readAndParsePlanets();
     });
 
     afterAll(async ()=>{
